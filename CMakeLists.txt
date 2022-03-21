@@ -9,7 +9,8 @@
 cmake_minimum_required(VERSION 3.4.3)
 project(pybind11_json)
 
-set(PYBIND11_JSON_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
+# Cache variable so this can be used in parent projects
+set(PYBIND11_JSON_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include CACHE INTERNAL "Directory where pybind11 json headers are located")
 set(${PROJECT_NAME}_VERSION_MAJOR 0)
 set(${PROJECT_NAME}_VERSION_MINOR 2)
 set(${PROJECT_NAME}_VERSION_PATCH 12)
